@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var marksSubject1 = parseFloat(prompt("Enter marks obtained in Subject 1:"));
+        var marksSubject2 = parseFloat(prompt("Enter marks obtained in Subject 2:"));
+        var marksSubject3 = parseFloat(prompt("Enter marks obtained in Subject 3:"));
+        var totalMarks = parseFloat(prompt("Enter total marks for each subject:"));
+
+        var totalMarksObtained = marksSubject1 + marksSubject2 + marksSubject3;
+
+        var percentage = (totalMarksObtained / (3 * totalMarks)) * 100;
+
+        var grade, remarks;
+
+        if (percentage >= 80) {
+            grade = 'A+';
+            remarks = 'Excellent';
+        } else if (percentage >= 70) {
+            grade = 'A';
+            remarks = ' Good';
+        } else if (percentage >= 60) {
+            grade = 'B';
+            remarks = 'You Need to Improve';
+        } else {
+            grade = 'Fail';
+            remarks = 'sorry';
+        }
+
+
+
+        document.write("<h2>Result</h2>");
+        document.write("<p><strong>Total Marks:</strong> " + totalMarks * 3 + "</p>");
+        document.write("<p><strong>Marks Obtained:</strong> " + totalMarksObtained + "</p>");
+        document.write("<p><strong>Percentage:</strong> " + percentage.toFixed(2) + "%</p>");
+        document.write("<p><strong>Grade:</strong> " + grade + "</p>");
+        document.write("<p><strong>Remarks:</strong> " + remarks + "</p>");
+
+
+
+
+    </script>
+</body>
+
+</html>
